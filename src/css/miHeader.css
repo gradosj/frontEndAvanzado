@@ -1,7 +1,9 @@
 .header {
+    /*
     background: url(/src/images/fondo.jpeg) no-repeat center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh;*/
+
   }
 
   .header .navbar {
@@ -21,4 +23,8 @@
 
   img{
       max-width: 100%;
+      width: 100%;
   }
+
+
+  
