@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="src/css/reset.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="src/css/miHeader.css">
 
 
   <title>Aprendiendo Javascrip</title>
 </head>
+
 <body>
   <header class="header">
 
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand beerflix">BeerFlix</a>
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0 miboton" type="submit">Search</button>
-    </form>
- 
-  </nav>
-</header>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand beerflix">BeerFlix</a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" type="date" placeholder="date" aria-label="date">
+        <button class="btn btn-outline-success my-2 my-sm-0 miboton" type="submit">Search</button>
+      </form>
 
- <picture>
-  <source media="(min-width: 1200px)" src="fondo@hires.jpeg">
-  <source media="(min-width: 768px)" src="fondo@tablet.jpeg">
-  <source media="(min-width: 350px)" src="fondo@mobile.jpeg">
-  <source src="fondo.jpeg">
-</picture>
+    </nav>
+  </header>
 
-<!--
+  <picture class="fondo">
+    <source srcset="fondo@hires.jpeg" media="(min-width: 1200px)">
+    <source srcset="fondo@tablet.jpeg" media="(min-width: 768px)">
+
+    <img src="fondo@mobile.jpeg" alt="fondo">
+
+  </picture>
+
+  <!--
 <img src="fondo.jpeg" 
      srcset="fondo@mobile,jpeg 2x, 
              fondo@tablet.jpeg 768w, 
              fondo@hires.jpeg 1200w " />
 
              -->
+
+
+  <br><br><br>
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza">
+          <div class="card-body">
+            <h4 class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza1">
+          <div class="card-body">
+            <h4 class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </body>
+
+<script>
+  const cambioTexto = document.querySelector('#prueba1');
+  console.log(cambioTexto);
+
+  cambioTexto.innerHTML = '<h4 id="prueba1" class="card-title">Probando</h4>';
+
+
+
+</script>
 </html>
