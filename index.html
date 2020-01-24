@@ -18,11 +18,11 @@
   <header class="header">
 
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand beerflix">BeerFlix</a>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <a class= 'titulo'>BeerFlix</a>
+      <form id = 'search-form' class="form-inline">
+        <input id= 'input-search' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <input class="form-control mr-sm-2" type="date" placeholder="date" aria-label="date">
-        <button class="btn btn-outline-success my-2 my-sm-0 miboton" type="submit">Search</button>
+        <button id= 'submit' class="btn btn-outline-success my-2 my-sm-0 miboton" type="submit">Search</button>
       </form>
 
     </nav>
@@ -50,9 +50,19 @@
 
     <div class="row">
 
-      <div class="col-md-4">
+      <div id = 'show-section' class="col-md-4">
         <div class="card">
           <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza">
+          <div class="card-body">
+            <h4 class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a id="pruebaclic" href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza1">
           <div class="card-body">
             <h4 class="card-title">Titulo de la tarjeta</h4>
             <p class="card-text">Texto de ejemplo</p>
@@ -62,9 +72,79 @@
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza1">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
           <div class="card-body">
-            <h4 class="card-title">Titulo de la tarjeta</h4>
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
+            <p class="card-text">Texto de ejemplo</p>
+            <a href="#" class="btn btn-primary">Ir a …</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza2">
+          <div class="card-body">
+            <h4 id="prueba1" class="card-title">Titulo de la tarjeta</h4>
             <p class="card-text">Texto de ejemplo</p>
             <a href="#" class="btn btn-primary">Ir a …</a>
           </div>
@@ -93,6 +173,15 @@
   cambioTexto.innerHTML = '<h4 id="prueba1" class="card-title">Probando</h4>';
 
 
+  const button = document.querySelector('#pruebaclic');
+
+  button.addEventListener('click', evt => {
+    console.log('click!!!');
+
+  });
 
 </script>
+
+<script type="module" src="/src/js/navbar.js"></script>
+<script type="module" src="/src/js/shows.js"></script>
 </html>
