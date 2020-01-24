@@ -25,7 +25,12 @@ button1.addEventListener('click', evt => {
 
     downloadsBeers();
     function downloadsBeers(cantidad) {
-        const api = 'https://beerflix-api.herokuapp.com/api/v1/beers';
+        console.log(filtro1);
+        let api = `https://beerflix-api.herokuapp.com/api/v1/beers`;
+        if (filtro1 != ''){
+            api = `https://beerflix-api.herokuapp.com/api/v1/beers?search=${filtro1}`;
+        }
+        
         return fetch(api, {
             method: 'GET',
             headers: {
@@ -41,14 +46,16 @@ button1.addEventListener('click', evt => {
     function imprimirHTML(datos) {
         console.log(datos);
         datos.forEach(cervezas => {
+           
+            const {name, image, firstBrewed} = cervezas;
             let cards = document.querySelector('#show-section');
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
                 <div class="card">
-                <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza">
+                <img class="card-img-top" height="600" src="${image}" alt="cerveza">
                 <div class="card-body">
-                    <h4 class="card-title">Titulo de la tarjeta</h4>
-                    <p class="card-text">Texto de ejemplo</p>
+                    <h4 class="card-title">${name}</h4>
+                    <p class="card-text">${firstBrewed}</p>
                     <a id="pruebaclic" href="#" class="btn btn-primary">Ir a …</a>
                 </div>
                 </div>
