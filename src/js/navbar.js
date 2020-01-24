@@ -41,7 +41,7 @@ button1.addEventListener('click', evt => {
     function imprimirHTML(datos) {
         console.log(datos);
         datos.forEach(cervezas => {
-            let cards = document.querySelector('#card');
+            let cards = document.querySelector('#show-section');
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
                 <div class="card">
