@@ -26,11 +26,11 @@ const renderShowsDOM = text => {
         {title: 'show 2', summary: 'loren impsun 2'},
     ];
     const showSection = document.querySelector('show-section');
-    renderShowsDOM(showSection, shows)
+    renderShows(showSection, shows);
 };
 
 console.log(renderShows);
 console.log(renderShowsDOM);
 
 
-export default renderShowsDOM
+export default renderShowsDOM;
