@@ -1,4 +1,4 @@
-console.log('shows.js');
+
 /*import cards from './navbar';
 /*
 const templateShow = () => {

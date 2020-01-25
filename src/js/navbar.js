@@ -1,19 +1,27 @@
-/*import renderShowsDOM from '../js/shows.js';*/
+
+import storage from './storage.js'; 
+   /*import renderShowsDOM from '../js/shows.js';*/
 const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
 console.log('navbar.js');
-
-
+const INPUT_STORAGE_ID = 'navbar-input';
+const INPUT_STORAGE_FECHA = 'navbar-fecha';
+const {setItem, getItem} = storage('lStorage');
 const searchForm = document.querySelector('#search-form');
+const fechaInput = document.querySelector('#filtroFecha');
 const searchInput = document.querySelector('#input-search');
 const button1 = document.querySelector('#submit');
 
-searchForm.addEventListener('#submit', evt => {
+searchInput.value = getItem(INPUT_STORAGE_ID);
+fechaInput.value = getItem(INPUT_STORAGE_FECHA);
+
+/*
+searchForm.addEventListener('submit', evt => {
     evt.preventDefault();
     if (searchInput.validity.valid) {
         renderShowsDOM(searchInput.value);
         console.log('Get shows');
     }
-});
+});*/
 
 
 /* Evento clickar en el search */
@@ -25,6 +33,9 @@ button1.addEventListener('click', evt => {
   //  const filtroFecha = document.getElementById('filtroFecha')[0].value;
     let filtroFecha = document.getElementById('filtroFecha').value;
     console.log('valor filtroFecha --> ' ,filtroFecha);
+
+    setItem(INPUT_STORAGE_ID, filtro1 );
+    setItem(INPUT_STORAGE_FECHA, filtroFecha );
 
     downloadsBeers(filtroFecha);
     
@@ -55,11 +66,17 @@ button1.addEventListener('click', evt => {
         /*  .then(datos => console.log(datos.beers))*/
     }
 
-
     function imprimirHTML(datos, fechaOK) {
          console.log(datos);
+         let contador = 0;
+         const listadoMaximo = 10;
 
+         console.log(contador);
+         
+
+         
         datos.forEach(cervezas => { 
+            if (contador < listadoMaximo){
            
             const {name, image, firstBrewed} = cervezas;
 
@@ -109,21 +126,17 @@ button1.addEventListener('click', evt => {
 
         }
 
+        contador++;
         
-        
-           
+    }
         })
     }
+    
 });
 
 const goodDate = (filtroFecha) => {
     var info = filtroFecha.split('-');
     return  info[1] + '/' + info[0];
-    
-    
-
-
-   
 
     
 };
