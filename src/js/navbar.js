@@ -24,19 +24,32 @@ button1.addEventListener('click', evt => {
 
   //  const filtroFecha = document.getElementById('filtroFecha')[0].value;
     let filtroFecha = document.getElementById('filtroFecha').value;
-    console.log('valor filtrofecha --> ' ,filtroFecha);
+    console.log('valor filtroFecha --> ' ,filtroFecha);
+
+    
 
 
-    if (filtroFecha != '') {
-        const fechaOK = goodDate(filtroFecha);
-
-        console.log ('valor de fechaOK --> ', fechaOK);
-        console.log(true)}
+   
 
 
-    downloadsBeers();
-    function downloadsBeers(cantidad) {
-        console.log(filtro1);
+    downloadsBeers(filtroFecha);
+    
+
+
+
+    
+
+    function downloadsBeers(filtroFecha) {
+    let fechaOK;
+
+        if (filtroFecha != '') {
+            fechaOK = goodDate(filtroFecha);
+    
+            console.log ('valor de fechaOK --> ', fechaOK);
+            console.log(true)}
+
+
+        console.log('filtro 1: ', filtro1);
         let api = `https://beerflix-api.herokuapp.com/api/v1/beers`;
         if (filtro1 != ''){
             api = `https://beerflix-api.herokuapp.com/api/v1/beers?search=${filtro1}`;
@@ -49,16 +62,23 @@ button1.addEventListener('click', evt => {
             }
         })
             .then(respuesta => respuesta.json())
-            .then(datos => imprimirHTML(datos.beers))
+            .then(datos => imprimirHTML(datos.beers, fechaOK))
         /*  .then(datos => console.log(datos.beers))*/
     }
 
 
-    function imprimirHTML(datos) {
+    function imprimirHTML(datos, fechaOK) {
         console.log(datos);
+
         datos.forEach(cervezas => {
            
             const {name, image, firstBrewed} = cervezas;
+
+
+            console.log('la que me interese --> ', fechaOK)
+
+            if(fechaOK == undefined){
+
             let cards = document.querySelector('#show-section');
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
@@ -73,13 +93,36 @@ button1.addEventListener('click', evt => {
             </div>
             
             `;
+        } else{
+            let fechaInput = new Date ('01/' + fechaOK);
+            let fechaBeer  = new Date ('01/' + firstBrewed);
+
+            
+            if (fechaInput.getTime() > fechaBeer.getTime()){
+                let cards = document.querySelector('#show-section');
+            cards.innerHTML = cards.innerHTML + `
+            <div id = 'show-section' class="col-md-4">
+                <div class="card">
+                <img class="card-img-top" height="600" src="${image}" alt="cerveza">
+                <div class="card-body">
+                    <h4 class="card-title">${name}</h4>
+                    <p class="card-text">${firstBrewed}</p>
+                    <a id="pruebaclic" href="#" class="btn btn-primary">Ir a …</a>
+                </div>
+                </div>
+            </div>
+            
+            `;
+            }
+
+
+        }
 
 
 
            
         })
     }
-
 });
 
 const goodDate = (filtroFecha) => {
