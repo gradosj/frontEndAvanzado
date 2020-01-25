@@ -18,7 +18,7 @@
   <header class="header">
 
     <nav class="navbar navbar-light bg-light">
-      <a class= 'titulo'>BeerFlix</a>
+      <a class= 'titulo' href="index.html">BeerFlix</a>
       <form id = 'search-form' class="form-inline">
         <input id= 'input-search' name = 'filtro' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <input id= 'filtroFecha' class="form-control mr-sm-2" name = 'filtroFecha' type="date" placeholder="date" aria-label="datef">
@@ -32,7 +32,7 @@
     <source srcset="fondo@hires.jpeg" media="(min-width: 1200px)">
     <source srcset="fondo@tablet.jpeg" media="(min-width: 768px)">
 
-    <img src="fondo@mobile.jpeg" alt="fondo">
+    <img class="fondo" src="fondo@mobile.jpeg" alt="fondo">
 
   </picture>
 
@@ -58,7 +58,7 @@
       <!--
       <div id = 'show-section' class="col-md-4">
         <div class="card">
-          <img class="card-img-top" src="/src/images/cerveza.png" alt="cerveza">
+          <img class="card-img-top img-fluid redimension" src="https://images.punkapi.com/v2/58.png"  alt="cerveza">
           <div class="card-body">
             <h4 class="card-title">Titulo de la tarjeta</h4>
             <p class="card-text">Texto de ejemplo</p>
@@ -66,10 +66,10 @@
           </div>
         </div>
       </div>
-     -->
+     
 
     </div>
-
+-->
   </div>
 </body>
 
@@ -89,9 +89,12 @@
   
 
 </script>
-
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script type="module" src="/src/js/navbar.js"></script>
 <script type="module" src="/src/js/details.js"></script>
-<script type="module" src="/src/js/storage.js"></script>
+<script type="module" src="/src/js/routes.js"></script>
+
+
+
 <!--<script type="module" src="/src/js/prueba.js"></script> -->
 </html>

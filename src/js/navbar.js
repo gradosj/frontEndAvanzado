@@ -89,7 +89,7 @@ button1.addEventListener('click', evt => {
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
                 <div class="card">
-                <img class="card-img-top dimension" height="600" src="${image}" alt="cerveza">
+                <img class="card-img-top img-fluid redimension" height="600" src="${image}" alt="cerveza">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">${firstBrewed}</p>
@@ -109,7 +109,7 @@ button1.addEventListener('click', evt => {
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
                 <div class="card">
-                <img class="card-img-top dimension" height="600" src="${image}" alt="cerveza">
+                <img class="card-img-top img-fluid redimension" height="600" src="${image}" alt="cerveza">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">${firstBrewed}</p>
