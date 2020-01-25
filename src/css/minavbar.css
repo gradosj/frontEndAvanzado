@@ -23,6 +23,7 @@ p {
 }
 
 
+
 input {
 	outline: none;
 }
@@ -63,6 +64,7 @@ input[type=search]:focus {
 }
 
 
+
 input:-moz-placeholder {
 	color: #999;
 }
@@ -94,3 +96,6 @@ input::-webkit-input-placeholder {
 	color: transparent;
 }
 
+img{
+	max-width: 300px;
+}

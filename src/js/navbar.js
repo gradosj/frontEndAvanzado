@@ -1,4 +1,4 @@
-import renderShowsDOM from '../js/shows.js';
+/*import renderShowsDOM from '../js/shows.js';*/
 const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
 console.log('navbar.js');
 
@@ -26,19 +26,8 @@ button1.addEventListener('click', evt => {
     let filtroFecha = document.getElementById('filtroFecha').value;
     console.log('valor filtroFecha --> ' ,filtroFecha);
 
-    
-
-
-   
-
-
     downloadsBeers(filtroFecha);
     
-
-
-
-    
-
     function downloadsBeers(filtroFecha) {
     let fechaOK;
 
@@ -83,11 +72,11 @@ button1.addEventListener('click', evt => {
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
                 <div class="card">
-                <img class="card-img-top" height="600" src="${image}" alt="cerveza">
+                <img class="card-img-top dimension" height="600" src="${image}" alt="cerveza">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">${firstBrewed}</p>
-                    <a id="pruebaclic" href="#" class="btn btn-primary">Ir a …</a>
+                    <a id="detalle" href="#" class="btn btn-primary">Ir a …</a>
                 </div>
                 </div>
             </div>
@@ -103,23 +92,25 @@ button1.addEventListener('click', evt => {
             cards.innerHTML = cards.innerHTML + `
             <div id = 'show-section' class="col-md-4">
                 <div class="card">
-                <img class="card-img-top" height="600" src="${image}" alt="cerveza">
+                <img class="card-img-top dimension" height="600" src="${image}" alt="cerveza">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">${firstBrewed}</p>
-                    <a id="pruebaclic" href="#" class="btn btn-primary">Ir a …</a>
+                    <a id="detalle" href="#" class="btn btn-primary">Ir a …</a>
                 </div>
                 </div>
             </div>
             
             `;
+            
+
             }
 
 
         }
 
-
-
+        
+        
            
         })
     }
@@ -136,3 +127,4 @@ const goodDate = (filtroFecha) => {
 
     
 };
+

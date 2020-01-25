@@ -1,5 +1,6 @@
 console.log('shows.js');
-
+/*import cards from './navbar';
+/*
 const templateShow = () => {
     return `
     <div class="col-md-4">
@@ -34,3 +35,4 @@ console.log(renderShowsDOM);
 
 
 export default renderShowsDOM;
+console.log(cards);*/
