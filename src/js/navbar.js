@@ -68,9 +68,9 @@ button1.addEventListener('click', evt => {
 
 
     function imprimirHTML(datos, fechaOK) {
-        console.log(datos);
+         console.log(datos);
 
-        datos.forEach(cervezas => {
+        datos.forEach(cervezas => { 
            
             const {name, image, firstBrewed} = cervezas;
 
