@@ -1,4 +1,5 @@
 import renderShowsDOM from '../js/shows.js';
+const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
 console.log('navbar.js');
 
 
@@ -23,18 +24,15 @@ button1.addEventListener('click', evt => {
 
   //  const filtroFecha = document.getElementById('filtroFecha')[0].value;
     let filtroFecha = document.getElementById('filtroFecha').value;
-    console.log(filtroFecha);
-
-    //Convertimos la fecha en el formato correcto para el filtrado
-    const fechaOK = goodDate(filtroFecha);
-    console.log (fechaOK);
-
-    
+    console.log('valor filtrofecha --> ' ,filtroFecha);
 
 
-    
+    if (filtroFecha != '') {
+        const fechaOK = goodDate(filtroFecha);
 
-    const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
+        console.log ('valor de fechaOK --> ', fechaOK);
+        console.log(true)}
+
 
     downloadsBeers();
     function downloadsBeers(cantidad) {
