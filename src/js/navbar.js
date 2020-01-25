@@ -19,7 +19,20 @@ searchForm.addEventListener('#submit', evt => {
 button1.addEventListener('click', evt => {
     console.log('click!!! search');
     const filtro1 = document.getElementsByName('filtro')[0].value;
-    console.log(filtro1);
+    console.log('hola' + filtro1);
+
+  //  const filtroFecha = document.getElementById('filtroFecha')[0].value;
+    let filtroFecha = document.getElementById('filtroFecha').value;
+    console.log(filtroFecha);
+
+    //Convertimos la fecha en el formato correcto para el filtrado
+    const fechaOK = goodDate(filtroFecha);
+    console.log (fechaOK);
+
+    
+
+
+    
 
     const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
 
@@ -71,3 +84,14 @@ button1.addEventListener('click', evt => {
 
 });
 
+const goodDate = (filtroFecha) => {
+    var info = filtroFecha.split('-');
+    return  info[1] + '/' + info[0];
+    
+    
+
+
+   
+
+    
+};
