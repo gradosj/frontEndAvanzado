@@ -8,95 +8,49 @@
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/css/miHeader.css">
+  <link rel="stylesheet" href="src/css/miCss.css">
 
 
-  <title>Aprendiendo Javascrip</title>
+  <title>Aprendiendo FrontEnd</title>
 </head>
 
 <body>
   <header class="header">
 
     <nav class="navbar navbar-light bg-light">
-      <a class= 'titulo' href='javascript:location.reload()'>BeerFlix</a>
-      <form id = 'search-form' class="form-inline">
-        <input id= 'input-search' name = 'filtro' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <input id= 'filtroFecha' class="form-control mr-sm-2" name = 'filtroFecha' type="date" placeholder="date" aria-label="datef">
-        <button id= 'submit' class="btn btn-outline-success my-2 my-sm-0 miboton" type="button">Search</button>
+      <a class='titulo' href='/index.html'>BeerFlix</a>
+      <form id='search-form' class="form-inline">
+        <input id='input-search' name='filtro' class="form-control mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search">
+        <input id='filtroFecha' class="form-control mr-sm-2" name='filtroFecha' type="date" placeholder="date"
+          aria-label="datef">
+        <button id='submit' class="btn btn-outline-success my-2 my-sm-0 miboton" type="button">Search</button>
       </form>
 
     </nav>
   </header>
 
   <picture class="fondo">
-    <source srcset="fondo@hires.jpeg" media="(min-width: 1200px)">
-    <source srcset="fondo@tablet.jpeg" media="(min-width: 768px)">
+    <source srcset="/src/images/fondo@hires.jpeg" media="(min-width: 1200px)">
+    <source srcset="/src/images/fondo@tablet.jpeg" media="(min-width: 768px)">
 
-    <img class="fondo" src="fondo@mobile.jpeg" alt="fondo">
+    <img class="fondo" src="/src/images/fondo@mobile.jpeg" alt="fondo">
 
   </picture>
-
-  <!--
-<img src="fondo.jpeg" 
-     srcset="fondo@mobile,jpeg 2x, 
-             fondo@tablet.jpeg 768w, 
-             fondo@hires.jpeg 1200w " />
-
-             -->
 
 
   <br><br><br>
   <div class="container">
 
-    <div id= 'show-section' class="row">
+    <div id='show-section' class="row">
 
 
-<!--
-      <div id = 'show-section' class="col-md-4">
-      </div>
-
-      
-      <div id = 'show-section' class="col-md-4">
-        <div class="card">
-          <img class="card-img-top img-fluid redimension" src="https://images.punkapi.com/v2/58.png"  alt="cerveza">
-          <div class="card-body">
-            <h4 class="card-title">Titulo de la tarjeta</h4>
-            <p class="card-text">Texto de ejemplo</p>
-            <a id="detalle" href="/detail/15" class="btn btn-primary">Ir a …</a>
-          </div>
-        </div>
-      </div>
-     
-
-    </div>
-
-  </div>
-  -->
 </body>
 
-<script>
-  const cambioTexto = document.querySelector('#prueba1');
-  console.log(cambioTexto);
-/*
-  cambioTexto.innerHTML = '<h4 id="prueba1" class="card-title">Probando</h4>';
-
-*/
-  const button = document.querySelector('#pruebaclic');
-
-//  button.addEventListener('click', evt => {
- //   console.log('click!!!');
-//  
- // });
-  
-
-</script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script type="module" src="/src/js/navbar.js"></script>
 <script type="module" src="/src/js/details.js"></script>
 <script type="module" src="/src/js/routes.js"></script>
-<script type="module" src="/src/js/likes.js"></script>
 
 
-
-<!--<script type="module" src="/src/js/prueba.js"></script> -->
 </html>

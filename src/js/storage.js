@@ -7,7 +7,7 @@ const lStorage = {
 const cookieStorage = {
     setItem: (key, value) => cookieStorage.set(key, value),
     getItem: key => cookieStorage.getItem(key),
-    
+
 };
 
 
@@ -17,7 +17,7 @@ const storage = (type = 'lStorage') => {
         cookieStorage,
     };
 
-    if (typeof(Storage) !== 'undefined') {
+    if (typeof (Storage) !== 'undefined') {
         return types[type];
     }
     return type['cookieStorage'];

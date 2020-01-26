@@ -3,9 +3,7 @@ const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
 const detail = document.querySelector('#detalle');
 let pintado = false;
 
-/*detail.addEventListener('click', evt => {
 
-  downloadsDetails(beerId);*/
   function downloadsDetails(beerId) {
     pintado = true;
     console.log('pintado: ',pintado)
@@ -23,7 +21,7 @@ let pintado = false;
     })
       .then(respuesta => respuesta.json())
       .then(datos => imprimirHTML(datos.beer))
-    /*  .then(datos => console.log(datos.beers))*/
+    
   }
 
   function imprimirHTML(datos) {
@@ -36,7 +34,7 @@ let pintado = false;
              
         let cards = document.querySelector('#show-section');
         cards.innerHTML =  `
-        <div class="card mb-3" style="max-width: 540px;">
+        <div class="card mb-3" style="max-width: 800px;">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="${image}" class="card-img redimension" alt="...">
@@ -90,12 +88,7 @@ let pintado = false;
                 })
   }
   
-   
 
-
-/*
-});
-*/
 export default downloadsDetails;
 
 
