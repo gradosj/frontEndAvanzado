@@ -11,6 +11,7 @@ const fechaInput = document.querySelector('#filtroFecha');
 const searchInput = document.querySelector('#input-search');
 const button1 = document.querySelector('#submit');
 
+
 searchInput.value = getItem(INPUT_STORAGE_ID);
 fechaInput.value = getItem(INPUT_STORAGE_FECHA);
 
