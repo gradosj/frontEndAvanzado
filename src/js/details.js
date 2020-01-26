@@ -32,20 +32,21 @@ let pintado = false;
     console.log('entra en imprimir html: ' , datos);
     typeof(datos);
 
-      const { name, image, firstBrewed, beerId, description, likes } = datos;
+      const { name, image, firstBrewed, beerId, description, likes} = datos;
              
         let cards = document.querySelector('#show-section');
         cards.innerHTML =  `
         <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="${image}" class="card-img" alt="...">
+            <img src="${image}" class="card-img redimension" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">id:${beerId} / ${name}</h5>
+              <h5 class="card-title">${name}</h5>
               <p class="card-text">${firstBrewed}</p>
               <p class="card-text">${description}</p>
+              
               <p id = "imgLikes" class="card-text"><small class="text-muted">LIKE! ${likes}</small></p>
             </div>
           </div>
