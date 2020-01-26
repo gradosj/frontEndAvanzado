@@ -41,6 +41,7 @@ detail.addEventListener('click', evt => {
   function downloadsDetails(beerId) {
 
     let api = `https://beerflix-api.herokuapp.com/api/v1/beers/${beerId}`;
+    console.log(api);
 
     return fetch(api, {
       method: 'GET',
@@ -49,15 +50,18 @@ detail.addEventListener('click', evt => {
       }
     })
       .then(respuesta => respuesta.json())
-      .then(datos => imprimirHTML(datos.beers))
+      .then(datos => imprimirHTML(datos.beer))
     /*  .then(datos => console.log(datos.beers))*/
   }
 
   function imprimirHTML(datos) {
+    console.log('entra en imprimir html: ' , datos);
+    typeof(datos);
    
-    datos.forEach(cervezas => {
+    //datos.forEach(cervezas => {
+      
 
-      const { name, image, firstBrewed, beerId, description } = cervezas;
+      const { name, image, firstBrewed, beerId, description } = datos;
              
         let cards = document.querySelector('#show-section');
         cards.innerHTML =  `
@@ -80,7 +84,7 @@ detail.addEventListener('click', evt => {
           `;
      
       
-    })
+    //})
   }
 
 });
