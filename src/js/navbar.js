@@ -37,7 +37,7 @@ button1.addEventListener('click', (evt) => {
             console.log(true);
         }
 
-        console.log('filtro 1: ', filtro1);
+        //console.log('filtro 1: ', filtro1);
         let api = `https://beerflix-api.herokuapp.com/api/v1/beers`;
         if (filtro1 != '') {
             api = `https://beerflix-api.herokuapp.com/api/v1/beers?search=${filtro1}`;
@@ -54,17 +54,17 @@ button1.addEventListener('click', (evt) => {
     }
 
     function imprimirHTML(datos, fechaOK) {
-        console.log(datos);
+        //console.log(datos);
         let contador = 0;
         const listadoMaximo = 10;
 
-        console.log(contador);
+        //console.log(contador);
 
         datos.forEach((cervezas) => {
             if (contador < listadoMaximo) {
                 const { name, image, firstBrewed, beerId } = cervezas;
 
-                console.log('la que me interese --> ', fechaOK);
+                //console.log('la que me interese --> ', fechaOK);
 
                 if (fechaOK == undefined) {
                     let cards = document.querySelector('#show-section');

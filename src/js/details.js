@@ -6,12 +6,12 @@ let pintado = false;
 
   function downloadsDetails(beerId) {
     pintado = true;
-    console.log('pintado: ',pintado)
+   // console.log('pintado: ',pintado)
 
 
 
     let api = `https://beerflix-api.herokuapp.com/api/v1/beers/${beerId}`;
-    console.log(api);
+    //console.log(api);
 
     return fetch(api, {
       method: 'GET',
@@ -27,7 +27,7 @@ let pintado = false;
   function imprimirHTML(datos) {
 
     
-    console.log('entra en imprimir html: ' , datos);
+    //console.log('entra en imprimir html: ' , datos);
     typeof(datos);
 
       const { name, image, firstBrewed, beerId, description, likes} = datos;
@@ -75,7 +75,7 @@ let pintado = false;
             }
         
             function imprimirHTML(datos) {
-              console.log('bla bla' , datos);
+              //console.log('bla bla' , datos);
               
               const { likes } = datos;
                             let ponLikes = document.querySelector('#imgLikes');

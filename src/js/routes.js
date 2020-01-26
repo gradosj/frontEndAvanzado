@@ -5,9 +5,9 @@ page('/', () => {
 
 });
 page('/detail/:id', (ctx) => {
-    console.log('Detail');
+    //console.log('Detail');
     const { params: { id } } = ctx;
-    console.log(id);
+    //console.log(id);
     downloadDetails(id);
 });
 page();
