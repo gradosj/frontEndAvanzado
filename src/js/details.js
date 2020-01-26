@@ -2,7 +2,7 @@
 const API_KEY = 'V0XRE4Q-FTYMPCA-MDWV1J2-XCFC55F';
 const detail = document.querySelector('#detalle');
 
-const beerId = 5;
+/*const beerId = 5;*/
 /*
 const detailTeplate = ({beerId, name, description, image} = {}) => {
   console.log('entra en detail');
@@ -34,10 +34,9 @@ const renderDetail = async beerId => {
   }
 }
 */
-detail.addEventListener('click', evt => {
+/*detail.addEventListener('click', evt => {
 
-  downloadsDetails(beerId);
-
+  downloadsDetails(beerId);*/
   function downloadsDetails(beerId) {
 
     let api = `https://beerflix-api.herokuapp.com/api/v1/beers/${beerId}`;
@@ -86,9 +85,12 @@ detail.addEventListener('click', evt => {
       
     //})
   }
-
+  
+  
+/*
 });
+*/
+export default downloadsDetails;
 
 
-//export default renderDetail;
 
